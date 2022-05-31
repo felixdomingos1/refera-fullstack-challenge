@@ -1,49 +1,102 @@
-# Refera - Fullstack Code Challenge
 
-## Description
+![Logo of the project](https://refera.com.br/wp-content/uploads/2021/07/logo-footer-2-min.png)
 
-Welcome to Refera's Fullstack code challenge! The goal of this challenge is to create a web application to manage maintanence orders from Refera, following the **Acceptance criteria**. The frontend of application has only one page and the backend contains a simple REST API service and has a connection with a database. By the end of the challenge, we will be able to create new orders and list them through the web application that comunicates with our backend service to read and store the data in a database.
 
-We use React and Django in our real application, feel comfortable to chose the appropriate technology you are familiar with. Elaborate briefly the architectural decisions, design patterns and frameworks you used on your solution.
+## Refera FullStack Challenge
+The objective of this project is to create an 
+application to manage Refera's maintenance orders
 
-## Resources
 
-![image](https://user-images.githubusercontent.com/10841710/141149769-d2bef978-7073-4ac7-b0af-6c0c8c7b6fe8.png)
+## Technology, Architectures and Standards
 
-## Acceptance criteria
+Here are the technologies used in this project.
 
-- Provide clear instructions on how to run the application in development mode
-- Provide clear instructions on how the application would run in a production environment
-- Describe how you would implement an authentication layer for the web application (don't need to implement)
-- RESTful API allowing CRUD and list operations on the orders
-  - Endpoint to create/retrieve/update/delete order
-  - Endpoint to list order
-- RESTful API allowing CRUD operations on the categories
-  - Endpoint to create/retrieve/update/delete category
-  - Endpoint to list categories
-- Database to store data from the following resources
-  - Order
-  - Category
-- Describe how you would structure the database to account for
-  - Real estate agency registration data
-  - Company registration data
-  - Contact registration data
-  - Describe what needs to be changed on the API you implemented
-- One web page, following the low fidelity prototype presented on the **Resources**
-  - Table with orders data, allowing the user to order the results by each column
-  - Button to open modal to create new order
-  - Allow row click to open modal to visualize order details
-- Modal to input data to create new order
-  - Form with appropriate inputs to handle each type of data
-  - Allow selection of registered categories from the database
-  - Save button to hit backend service and store the data
-- Modal to read only the order details
+* Nodejs
+* Mongo Atlas
+* Nextjs
+* TypeScript
+* TDD
+* Styled-Components
+* SOLID
 
-## Challenge guidelines
 
-- The usage of git will be taken into consideration on the evaluation
-- For this challenge, **Create** a repository in your Github account
-- You can create a private repository in your account if you want
-- If your repository is private, share your repository with email: suporte@refera.com.br
-- Send a email with the link of your repository to: suporte@refera.com.br
-- Remenber, all the written information requested on **Acceptance criteria** should be added on a README.md file inside the your repository
+## Services Used
+
+* Github
+* MongoDb Atlas
+
+<h3> Download & Installation </h3>
+
+The project contains two folders, one on the front and one on the back.
+
+To run the back:
+
+```shell
+$ cd refera-back
+
+$ npm i || yarn add
+
+$ npm dev || yarn dev
+```
+
+To run the back:
+
+```shell
+$ cd refera-front
+
+$ npm i || yarn add
+
+$ npm dev || yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+### - When you access, you will see the Home page <3
+
+![Homepage image](https://github.com/jgoncalves8080/refera-fullstack-challenge/blob/main/refera-front/src/assets/refera-front.png)
+
+
+## Features
+
+The main features of the application are:
+ - View Registered Orders.
+ - Register New Order
+
+
+## Production Environment
+
+How would I structure the database for Real Estate?
+
+I would create an entity called ``entity`` and another ``typeEntity``, to store the data of both the company and the real estate company. What would distinguish one from the other would be the typeEntity (which would contain the values ``Real Estate`` and ``Company``)
+
+To save its contacts, it created two new entities ``contact`` and ``contact`` type).
+Contact type would be ``email``, ``phone``,  and the contact would contain information related to the type.
+
+Given the case that an entity (company or real estate) may have more than one contact, a new table would appear, which would contain the id of the entity and the contact.
+
+## Port resources add in api
+
+* Pagination
+* Authentication
+* More test coverage (TDD)
+* Documentation (with Swagger)
+
+## Resources to add on the front
+
+* Authentication
+* Filters in the order listing
+* Input for order search
+* Modal to view order details
+* More test coverage (TDD)
+
+## What would the front end authentication process look like?
+
+* Integrate with NextAuth && OAuth2.0 for authentication with social networks.
+* Generate token on login (JWT).
+* Intercept the token in the header of all requests, if already authenticated.
+
+
+  ## Authors
+
+  * **José Gonçalves** 
