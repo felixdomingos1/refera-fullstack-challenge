@@ -6,11 +6,9 @@ Welcome to Refera's Fullstack code challenge! The goal of this challenge is to c
 
 We use React and Django in our real application, feel comfortable to chose the appropriate technology you are familiar with. Elaborate briefly the architectural decisions, design patterns and frameworks you used on your solution.
 
-
 ## Resources
 
 ![image](https://user-images.githubusercontent.com/10841710/141149769-d2bef978-7073-4ac7-b0af-6c0c8c7b6fe8.png)
-
 
 ## Acceptance criteria
 
@@ -26,7 +24,7 @@ We use React and Django in our real application, feel comfortable to chose the a
 - Database to store data from the following resources
   - Order
   - Category
-- Describe how you would structure the database to account for 
+- Describe how you would structure the database to account for
   - Real estate agency registration data
   - Company registration data
   - Contact registration data
